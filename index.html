@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №2 — Жадный алгоритм</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Лабораторная работа №2</h1>
+            <p class="subtitle">Применение жадного алгоритма для решения задачи о рюкзаке</p>
+        </header>
+
+        <div class="info-block">
+            <div class="info-item">
+                <span class="info-label">Суммарный вес всех предметов</span>
+                <span class="info-value" id="totalWeight">0 кг</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Ограничение на вес рюкзака</span>
+                <span class="info-value" id="capacity">0 кг</span>
+            </div>
+        </div>
+
+        <section>
+            <h2>Исходные данные</h2>
+            <div class="table-wrapper">
+                <table id="sourceTable">
+                    <thead>
+                        <tr>
+                            <th>i</th>
+                            <th>p_i (ценность)</th>
+                            <th>w_i (вес, кг)</th>
+                            <th>p_i / w_i</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Упорядоченные предметы по p_i / w_i</h2>
+            <div class="table-wrapper">
+                <table id="sortedTable">
+                    <thead>
+                        <tr>
+                            <th>Упорядоченные p_i / w_i</th>
+                            <th>Упорядоченные номера</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <button id="runBtn" onclick="runAlgorithm()">Запустить алгоритм</button>
+
+        <section>
+            <h2>Процесс заполнения рюкзака</h2>
+            <div id="processLog" class="log"></div>
+        </section>
+
+        <section>
+            <h2>Результат</h2>
+            <div id="result" class="result"></div>
+        </section>
+
+        <footer>
+            <p>Лабораторная работа №2 — Жадный алгоритм</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
